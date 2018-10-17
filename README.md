@@ -6,14 +6,14 @@
 
 * Diferentes maneiras de criar funções
 * Como "this" funciona
-* calbacks
+* callbacks
 * Diferentes maneiras de criar objetos javascript
-* Conceito de imutabilidade
+* Basico conceito de referência de objetos
 * Links pra tópicos mais aprofundados
 
-##### ESCREVER FUNÇÕES
+#### ESCREVER FUNÇÕES
 
-###### Função declarada (Function Declaration)
+##### Função declarada (Function Declaration)
 
 Sintaxe
 ```javascript
@@ -33,7 +33,7 @@ var result =soma(5,5);
 console.log(result); // 10
 ```
 
-###### Função de Expressão (Function Expression)
+##### Função de Expressão (Function Expression)
 
 Uma referência da função pode ser atribuida a uma variável
 
@@ -52,7 +52,7 @@ var result = soma(5,5);
 console.log(result); // 10
 ```
 
-###### Funções que retornam outra função
+##### Funções que retornam outra função
 
 
 Funções que são declaradas dentro de outras funções são chamadas de funções internas ou aninhadas.
@@ -71,7 +71,7 @@ var res = dobraValor(5);
 console.log(res); //10
 ```
 
-##### ESCOPO DE FUNÇÕES 
+#### ESCOPO DE FUNÇÕES 
 
 Escopo pode ser definido em dicionários como: “Limite ou abrangência de uma operação”
 
@@ -119,12 +119,12 @@ Pense um pouco…
 
 No momento em que calc foi chamada a função retornada cria e armazena seu escopo na memória. Como o escopo das funções internas abrange as funções na qual ela reside, no momento da chamada o escopo é armazenado na memória e na próxima chamada a função interna acessa o valor de x e pode fazer o cálculo.
 
-##### OBJETOS
+#### OBJETOS
 
 Bom, quando iniciei JavaScript isso era algo que eu sempre tive problemas. JavaScript é muito versátil e te permite criar objetos de algumas maneiras diferentes.
 Vamos lá.
 
-###### Objeto Literal
+##### Objeto Literal
 
 Esse tipo é bem comum. É um objeto pronto pra uso. Amplamente usado em parâmetros de funções para configurações de plugins ou outras funções, por exemplo. Essencialmente esse objeto é representado por {}. 
 
@@ -168,7 +168,7 @@ console.log( pessoa.fullName ( ) );  // Clayton Santos
 ```
 
 
-###### Também podemos construir objetos dessa maneira
+##### Também Podemos Construir Objetos Dessa Maneira
 ```javascript
 var pessoa = { };   // criar um obj vazio
 pessoa.name;    // atribui um atributo ao obj
@@ -185,7 +185,7 @@ alert( pessoa.getName() ); // Clayton
 
 A maneira que criamos objetos acimas são pouco flexíveis e não nos permite criar novos objetos com atributos diferentes. Abaixo veremos duas maneiras de criar objetos que podem gerar instâncias diversas. 
 
-###### Construtor de objetos new
+##### Construtor de objetos new
 
 ```javascript
 function person( firstName , lastName , age , eyeColor ) {
@@ -204,7 +204,8 @@ alert( pessoa1.getFullName() );    // Clayton Santos
 alert( pessoa2.getFullName() );    // João Santos
 ```
 
-##### OBJETOS EM JAVASCRIPT SÃO ABORDADOS POR REFERÊNCIA
+#### OBJETOS EM JAVASCRIPT SÃO ABORDADOS POR REFERÊNCIA
+
 Objetos em javascrip são abordados por referência, não por valor.
 Se foo é um objeto, a seguinte instrução não vai criar uma cópia de foo:
 ```javascript
@@ -221,7 +222,7 @@ alert(pessoa1.idade); // 10
 alert(pessoa2.idade); // 10
 ```
 
-##### CALLBACKS
+#### CALLBACKS
 
 Pra resumir, calbacks são funções passadas por parâmetros em outras funções.
 
@@ -256,7 +257,7 @@ O javascript está cheio de funções dessa maneira.
 
 Há um artigo muito bom sobre programação funcional no médium e um parte trata de callbacks: [Entendendo Programação Funcional em JavaScript de uma vez.](https://medium.com/tableless/entendendo-programa%C3%A7%C3%A3o-funcional-em-javascript-de-uma-vez-c676489be08b)
 
-##### THIS EM JAVASCRIPT
+#### THIS EM JAVASCRIPT
 
 Algo muito confuso em JavaScript é o this. Em linguagens como Java por exemplo, o this representa o objeto que chamou o método. Como aqui em JavaScript o this é definido no momento da chamada e não quando é definido o objeto/função é fácil cometer erros.
 
@@ -335,7 +336,7 @@ No caso do setTimeout embora a função imprimeName() seja definida dentro do ob
 Na maioria das vezes, quando se trata de callbacks, é comum perder o valor de this. Há maneiras de garantir que o this seja exatamente onde a função foi criada, mas isso é tópico mais adiante.  
 
 
-##### MANIPULANDO O HTML
+#### MANIPULANDO O HTML
 
 Em frontend é comum manipularmos o dom anexando eventos ou alterando. Eu chamo de dom todo o documento com todas as tags html. Tags eu chamo de **elementos do dom.** 
 
@@ -395,7 +396,7 @@ Há outras opções e você pode ver aqui:
 
 Para referência de quais eventos você pode anexar nos elementos(tag) pode consultar:[HTML DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
-##### Recapitulando callbacks, this numa mesma função e prototype
+#### Recapitulando callbacks, this numa mesma função e prototype
 
 Como dito, JavaScript possui várias funções que usam nativamente callbacks. 
 Já vimos como percorrer um array com o for basicão. Mas JavaScript nos dá uma maneira elegante de percorrer elementos com a função forEach() que recebe um callback por parâmetros que é chamada para cada item do array. 
