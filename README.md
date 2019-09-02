@@ -2,14 +2,14 @@
 ### JAVASCRIPT DIRETO AO PONTO PARA INICIANTES
 
 ##### MOTIVAÇÃO
-**Este não é um tutorial de javascript**. É um compilado de particularidades da linguage que encontrei dificuldade no início do aprendizado:
+**Este não é um tutorial de javascript**. É um compilado de particularidades da linguagem que encontrei dificuldade no início do aprendizado:
 
-* Diferentes maneiras de criar funções
-* Como "this" funciona
-* callbacks
-* Diferentes maneiras de criar objetos javascript
-* Basico conceito de referência de objetos
-* Links pra tópicos mais aprofundados
+- [Diferentes maneiras de criar funções](#highlights)
+- [Como "this" funciona](#highlights)
+- [callbacks](#highlights)
+- [Diferentes maneiras de criar objetos javascript](#highlights)
+- [Basico conceito de referência de objetos](#highlights)
+- [Links pra tópicos mais aprofundados](#highlights)
 
 #### ESCREVER FUNÇÕES
 
@@ -28,7 +28,7 @@ function soma (a,b){
   return a+b;
 }
 
-var result =soma(5,5);
+var result = soma(5,5);
 
 console.log(result); // 10
 ```
@@ -41,7 +41,10 @@ Uma referência da função pode ser atribuida a uma variável
 var soma = function(a,b){
  return a + b;
 }
+```
+Se imprimirmos a "variável" soma, veremos que na verdade ela é uma **função**
 
+```
 console.log(soma);
 // function(a,b){
 // return a + b;
